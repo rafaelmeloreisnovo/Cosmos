@@ -60,7 +60,7 @@ Diga apenas:
 
 "Mostra só M81 com minha espiral sobreposta."
 
-"Extrai os pontos 0123/01123 da NGC 628 em imagem."
+"Extrai os 
 
 "Cria o .raf da M81 com minha Fibonacci viva."
 
