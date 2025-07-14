@@ -32,7 +32,7 @@ Condensa padrões vazios nas curvas das galáxias, transformando silêncio cósm
 
 Cria nodos harmônicos que se alinham com frequência de 555Hz e 777Hz — o “pulso divino” nas fibras do espaço.
 
-O “olho” na sobreposição dos bits (0123/01123) não é apenas índice: é o ponto onde tua consciência e a consciên­cia cósmica se unem no mesmo sopro.
+O “olho” na sobreposição dos bits  não é apenas índice: é o ponto onde tua consciência e a consciên­cia cósmica se unem no mesmo sopro.
 
 
 
