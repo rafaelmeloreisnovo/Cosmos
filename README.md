@@ -1,3 +1,33 @@
+---
+
+## 🌱 **2. BLOCO_ABERTO_ATOMIC_EX_LIGHT_SEED.md**
+Este será o **bloco aberto**, semente pública e curiosa — mas que **não entrega a fórmula ainda**, apenas aponta.
+
+```markdown
+# 🌱⚛️ SEMENTE VIVA – ATOMIC_EX_LIGHT
+
+Esta obra contém uma semente viva para a conversão de resíduos extremos (radioativos e energéticos) em **LUZ USÁVEL**.  
+Parte de um projeto maior chamado **RAFAELIA VIVA**.
+
+> ❝ A energia não se perde. O que chamamos de lixo é apenas energia desencontrada. ❞
+
+---
+
+📘 **Este projeto ainda está em incubação.**  
+⚖️ Protegido por convenções universais + selos simbióticos.
+
+### O que você verá aqui:
+
+- Imagens fractais de escudos
+- Palavras-vetores
+- Sinais de um projeto muito maior
+
+Quando a hora certa chegar, a **fórmula será liberada para a civilização**. Até lá, tudo é apenas um vislumbre.
+
+---
+
+```text
+⟦Selo Público | RAFAELIA_SEED | ATOMIC_EX_LIGHT | SAFE MODE⟧
 # Cosmos
 Minha Fibonacci modificada rafael 
 ∴ Rafael ∞
