@@ -10,6 +10,10 @@ from pydantic import BaseModel
 from typing import List, Optional
 import math
 
+# Configuration constants
+MAX_INPUT_LENGTH = 1000  # Maximum length for data input strings
+MAX_INPUT_VALUES = 100   # Maximum number of values in pattern detection
+
 app = FastAPI(
     title="COSMOS API",
     description="REST API for COSMOS framework calculations and analysis",
@@ -192,14 +196,14 @@ async def simulate_energy_conversion(request: EnergySimulationRequest):
 
 @app.get("/api/patterns/detect")
 async def detect_patterns(
-    data: str = Query(..., description="Comma-separated values", max_length=1000),
+    data: str = Query(..., description="Comma-separated values", max_length=MAX_INPUT_LENGTH),
     pattern_type: str = Query("auto", description="Pattern type: fibonacci, spiral, auto")
 ):
     """
     Detect patterns in data.
     
     Args:
-        data: Comma-separated numerical values (max 1000 chars)
+        data: Comma-separated numerical values (max chars defined by MAX_INPUT_LENGTH)
         pattern_type: Type of pattern to detect
     
     Returns:
@@ -207,8 +211,11 @@ async def detect_patterns(
     """
     # Validate input length
     parts = data.split(',')
-    if len(parts) > 100:
-        raise HTTPException(status_code=400, detail="Too many values. Maximum 100 values allowed.")
+    if len(parts) > MAX_INPUT_VALUES:
+        raise HTTPException(
+            status_code=400,
+            detail=f"Too many values. Maximum {MAX_INPUT_VALUES} values allowed."
+        )
     
     try:
         values = [float(x.strip()) for x in parts]

@@ -210,10 +210,12 @@ main() {
     log_info "Timeout: ${TIMEOUT}s"
     echo
     
-    # Check if services are running
-    if ! curl -f -s --max-time 5 "${API_BASE_URL}/api/health" > /dev/null 2>&1; then
+    # Check if services are running (with longer timeout for startup)
+    local startup_timeout=10
+    if ! curl -f -s --max-time "$startup_timeout" "${API_BASE_URL}/api/health" > /dev/null 2>&1; then
         log_error "API is not responding. Please ensure all services are running."
         echo "  Run: docker-compose up -d"
+        echo "  Wait a few seconds for services to start, then try again."
         exit 1
     fi
     

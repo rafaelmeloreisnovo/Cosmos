@@ -210,5 +210,12 @@ COMMENT ON TABLE research_projects IS 'Research projects and innovations';
 COMMENT ON TABLE documentation IS 'COSMOS framework documentation';
 
 -- Grant permissions (adjust as needed)
--- GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO cosmos;
--- GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO cosmos;
+-- For production, use principle of least privilege:
+-- GRANT SELECT, INSERT ON ALL TABLES IN SCHEMA public TO cosmos_read_write;
+-- GRANT SELECT ON ALL TABLES IN SCHEMA public TO cosmos_read_only;
+-- GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO cosmos_read_write;
+-- Example minimal grants:
+-- GRANT CONNECT ON DATABASE cosmos_db TO cosmos;
+-- GRANT USAGE ON SCHEMA public TO cosmos;
+-- GRANT SELECT, INSERT, UPDATE ON users TO cosmos;
+-- GRANT SELECT ON fibonacci_sequences, galaxy_data TO cosmos;
