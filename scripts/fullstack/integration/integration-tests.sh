@@ -44,13 +44,14 @@ print_header() {
 
 run_test() {
     local test_name="$1"
-    local test_command="$2"
+    shift
+    local test_command=("$@")
     
     TESTS_RUN=$((TESTS_RUN + 1))
     
     echo -n "Running: $test_name... "
     
-    if eval "$test_command" > /dev/null 2>&1; then
+    if "${test_command[@]}" > /dev/null 2>&1; then
         log_success "PASSED"
         TESTS_PASSED=$((TESTS_PASSED + 1))
         return 0
@@ -65,30 +66,30 @@ test_api_health() {
     log_info "Testing API Health..."
     
     run_test "API Health Endpoint" \
-        "curl -f -s --max-time $TIMEOUT ${API_BASE_URL}/api/health"
+        curl -f -s --max-time "$TIMEOUT" "${API_BASE_URL}/api/health"
 }
 
 test_fibonacci_api() {
     log_info "Testing Fibonacci API..."
     
     run_test "Fibonacci Calculation (n=10)" \
-        "curl -f -s --max-time $TIMEOUT '${API_BASE_URL}/api/fibonacci?n=10'"
+        curl -f -s --max-time "$TIMEOUT" "${API_BASE_URL}/api/fibonacci?n=10"
     
     run_test "Fibonacci with Custom Modifier" \
-        "curl -f -s --max-time $TIMEOUT '${API_BASE_URL}/api/fibonacci?n=15&modifier=1.7'"
+        curl -f -s --max-time "$TIMEOUT" "${API_BASE_URL}/api/fibonacci?n=15&modifier=1.7"
 }
 
 test_galaxy_api() {
     log_info "Testing Galaxy Analysis API..."
     
     run_test "Galaxy Info - M81" \
-        "curl -f -s --max-time $TIMEOUT '${API_BASE_URL}/api/galaxy/M81'"
+        curl -f -s --max-time "$TIMEOUT" "${API_BASE_URL}/api/galaxy/M81"
     
     run_test "Galaxy Info - IC342" \
-        "curl -f -s --max-time $TIMEOUT '${API_BASE_URL}/api/galaxy/IC342'"
+        curl -f -s --max-time "$TIMEOUT" "${API_BASE_URL}/api/galaxy/IC342"
     
     run_test "Galaxy Info - NGC628" \
-        "curl -f -s --max-time $TIMEOUT '${API_BASE_URL}/api/galaxy/NGC628'"
+        curl -f -s --max-time "$TIMEOUT" "${API_BASE_URL}/api/galaxy/NGC628"
 }
 
 test_energy_api() {
@@ -97,9 +98,9 @@ test_energy_api() {
     local payload='{"mass_kg":0.001,"wavelength_nm":550,"duration_seconds":1}'
     
     run_test "Energy Simulation" \
-        "curl -f -s --max-time $TIMEOUT -X POST '${API_BASE_URL}/api/energy/simulate' \
-         -H 'Content-Type: application/json' \
-         -d '$payload'"
+        curl -f -s --max-time "$TIMEOUT" -X POST "${API_BASE_URL}/api/energy/simulate" \
+         -H "Content-Type: application/json" \
+         -d "$payload"
 }
 
 test_pattern_detection() {
@@ -108,21 +109,21 @@ test_pattern_detection() {
     local data="1,1,2,3,5,8,13,21,34"
     
     run_test "Pattern Detection - Fibonacci" \
-        "curl -f -s --max-time $TIMEOUT '${API_BASE_URL}/api/patterns/detect?data=${data}&pattern_type=fibonacci'"
+        curl -f -s --max-time "$TIMEOUT" "${API_BASE_URL}/api/patterns/detect?data=${data}&pattern_type=fibonacci"
 }
 
 test_api_documentation() {
     log_info "Testing API Documentation..."
     
     run_test "OpenAPI Docs Available" \
-        "curl -f -s --max-time $TIMEOUT '${API_BASE_URL}/docs'"
+        curl -f -s --max-time "$TIMEOUT" "${API_BASE_URL}/docs"
 }
 
 test_frontend_availability() {
     log_info "Testing Frontend Availability..."
     
     run_test "Frontend Home Page" \
-        "curl -f -s --max-time $TIMEOUT '${FRONTEND_URL}'"
+        curl -f -s --max-time "$TIMEOUT" "${FRONTEND_URL}"
 }
 
 test_database_connectivity() {
@@ -131,17 +132,33 @@ test_database_connectivity() {
     # This assumes the API has a database connection
     # If API health check passes and includes DB check, this is verified
     run_test "Database Connection via API" \
-        "curl -f -s --max-time $TIMEOUT '${API_BASE_URL}/api/health'"
+        curl -f -s --max-time "$TIMEOUT" "${API_BASE_URL}/api/health"
 }
 
 test_error_handling() {
     log_info "Testing Error Handling..."
     
-    run_test "Invalid Galaxy Name (404 Expected)" \
-        "curl -s --max-time $TIMEOUT '${API_BASE_URL}/api/galaxy/INVALID' | grep -q '404\|not found'"
+    # Test invalid galaxy name
+    TESTS_RUN=$((TESTS_RUN + 1))
+    echo -n "Running: Invalid Galaxy Name (404 Expected)... "
+    if curl -s --max-time "$TIMEOUT" "${API_BASE_URL}/api/galaxy/INVALID" | grep -q '404\|not found'; then
+        log_success "PASSED"
+        TESTS_PASSED=$((TESTS_PASSED + 1))
+    else
+        log_error "FAILED"
+        TESTS_FAILED=$((TESTS_FAILED + 1))
+    fi
     
-    run_test "Invalid Fibonacci Parameters" \
-        "curl -s --max-time $TIMEOUT '${API_BASE_URL}/api/fibonacci?n=-1' | grep -q '422\|error'"
+    # Test invalid fibonacci parameters
+    TESTS_RUN=$((TESTS_RUN + 1))
+    echo -n "Running: Invalid Fibonacci Parameters... "
+    if curl -s --max-time "$TIMEOUT" "${API_BASE_URL}/api/fibonacci?n=-1" | grep -q '422\|error'; then
+        log_success "PASSED"
+        TESTS_PASSED=$((TESTS_PASSED + 1))
+    else
+        log_error "FAILED"
+        TESTS_FAILED=$((TESTS_FAILED + 1))
+    fi
 }
 
 test_performance() {

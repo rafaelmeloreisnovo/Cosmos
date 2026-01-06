@@ -17,9 +17,10 @@ app = FastAPI(
 )
 
 # Enable CORS
+# Note: For production, replace ["*"] with specific allowed origins
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["http://localhost:3000", "http://localhost:8000"],  # Specify allowed origins
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -191,21 +192,26 @@ async def simulate_energy_conversion(request: EnergySimulationRequest):
 
 @app.get("/api/patterns/detect")
 async def detect_patterns(
-    data: str = Query(..., description="Comma-separated values"),
+    data: str = Query(..., description="Comma-separated values", max_length=1000),
     pattern_type: str = Query("auto", description="Pattern type: fibonacci, spiral, auto")
 ):
     """
     Detect patterns in data.
     
     Args:
-        data: Comma-separated numerical values
+        data: Comma-separated numerical values (max 1000 chars)
         pattern_type: Type of pattern to detect
     
     Returns:
         Pattern detection results
     """
+    # Validate input length
+    parts = data.split(',')
+    if len(parts) > 100:
+        raise HTTPException(status_code=400, detail="Too many values. Maximum 100 values allowed.")
+    
     try:
-        values = [float(x.strip()) for x in data.split(',')]
+        values = [float(x.strip()) for x in parts]
     except ValueError:
         raise HTTPException(status_code=400, detail="Invalid data format. Use comma-separated numbers.")
     

@@ -214,11 +214,11 @@ Values should be between 0.0 and 1.0
             # Try to load as file
             with open(args.evidence, 'r') as f:
                 evidence = json.load(f)
-        except:
+        except (FileNotFoundError, PermissionError) as e:
             try:
                 # Try to parse as JSON string
                 evidence = json.loads(args.evidence)
-            except:
+            except json.JSONDecodeError:
                 print(f"Error: Could not parse evidence: {args.evidence}")
                 return 1
     
