@@ -1,0 +1,105 @@
+version: '3.8'
+
+services:
+  # PostgreSQL Database
+  database:
+    image: postgres:14-alpine
+    container_name: cosmos_database
+    environment:
+      POSTGRES_DB: cosmos_db
+      POSTGRES_USER: cosmos
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-cosmos_secure_pass}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ../database/init-schema.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "5432:5432"
+    networks:
+      - cosmos_network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U cosmos"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Redis Cache
+  redis:
+    image: redis:7-alpine
+    container_name: cosmos_redis
+    ports:
+      - "6379:6379"
+    networks:
+      - cosmos_network
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Backend API
+  backend:
+    build:
+      context: ../backend
+      dockerfile: Dockerfile
+    container_name: cosmos_backend
+    environment:
+      DATABASE_URL: postgresql://cosmos:${DB_PASSWORD:-cosmos_secure_pass}@database:5432/cosmos_db
+      REDIS_URL: redis://redis:6379
+      API_HOST: 0.0.0.0
+      API_PORT: 8000
+    ports:
+      - "8000:8000"
+    depends_on:
+      database:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    networks:
+      - cosmos_network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    restart: unless-stopped
+
+  # Frontend
+  frontend:
+    build:
+      context: ../frontend
+      dockerfile: Dockerfile
+    container_name: cosmos_frontend
+    environment:
+      API_URL: http://backend:8000
+      NODE_ENV: production
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    networks:
+      - cosmos_network
+    restart: unless-stopped
+
+  # Nginx Reverse Proxy
+  nginx:
+    image: nginx:alpine
+    container_name: cosmos_nginx
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    ports:
+      - "80:80"
+      - "443:443"
+    depends_on:
+      - frontend
+      - backend
+    networks:
+      - cosmos_network
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+    driver: local
+
+networks:
+  cosmos_network:
+    driver: bridge
