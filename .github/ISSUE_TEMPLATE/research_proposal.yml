@@ -1,0 +1,48 @@
+name: "Research Proposal"
+description: "Propose new research content for the Cosmos RAFAELIA framework."
+labels: ["research", "proposal"]
+assignees: ["rafaelmeloreisnovo"]
+body:
+  - type: input
+    id: title
+    attributes:
+      label: "Proposal title"
+      placeholder: "Quantum coherence in spiral galaxy formation"
+    validations:
+      required: true
+  - type: dropdown
+    id: domain
+    attributes:
+      label: "Primary knowledge domain"
+      options:
+        - "01 - Mathematics / Number Theory"
+        - "02 - Cosmology / Astrophysics"
+        - "03 - Quantum Physics / Energy"
+        - "04 - Computational Theory"
+        - "05 - Consciousness / Observation"
+        - "06 - Fractal Geometry"
+        - "07 - Information Theory"
+        - "08 - Spiritual / Philosophical"
+        - "09 - Legal / IP"
+        - "10 - Economic / Market"
+        - "11 - Innovation / Technology"
+        - "12 - Academic Methodology"
+        - "13 - Visualization / Imaging"
+        - "14 - Energy Conversion"
+        - "15 - Spacetime Structures"
+        - "16 - Language / Semantics"
+        - "17 - Cryptography / Security"
+        - "New domain"
+    validations:
+      required: true
+  - type: textarea
+    id: hypothesis
+    attributes:
+      label: "Hypothesis"
+    validations:
+      required: true
+  - type: textarea
+    id: references
+    attributes:
+      label: "References"
+      placeholder: "BibTeX or DOI..."
