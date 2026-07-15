@@ -1,5 +1,7 @@
 # Relational Knowledge Forest — Cosmos/RAFAELIA
 
+<!-- markdownlint-disable MD013 MD060 -->
+
 ## 1. Purpose
 
 This document defines an executable cross-repository architecture for research that cannot be reduced to one document, one discipline, or one isolated problem.
