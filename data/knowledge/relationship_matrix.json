@@ -1,0 +1,478 @@
+{
+  "schema_version": "1.0.0",
+  "generated_on": "2026-07-15",
+  "root_id": "COSMOS_ROOT",
+  "evidence_states": [
+    "VERIFIED",
+    "PARTIAL",
+    "DECLARED_BY_AUTHOR",
+    "HYPOTHESIS",
+    "TOKEN_VAZIO",
+    "CONTRADICTION",
+    "PHILOSOPHICAL"
+  ],
+  "attention_states": [
+    "CORE",
+    "ACTIVE",
+    "LATENT",
+    "FORGOTTEN",
+    "UNDERSERVED",
+    "IGNORED",
+    "TOKEN_VAZIO"
+  ],
+  "relation_types": [
+    "FORMALIZES",
+    "PROVIDES_DATA",
+    "TESTS",
+    "FALSIFIES",
+    "TEMPORALIZES",
+    "GEOMETRIZES",
+    "TOPOLOGIZES",
+    "IMPLEMENTS",
+    "VISUALIZES",
+    "CITES",
+    "CONTRASTS",
+    "EXTENDS"
+  ],
+  "nodes": [
+    {
+      "id": "COSMOS_ROOT",
+      "label": "Cosmos relational research root",
+      "repo": "rafaelmeloreisnovo/Cosmos",
+      "path": "README.md",
+      "domain": ["cosmology", "mathematics", "knowledge-architecture"],
+      "evidence_state": "VERIFIED",
+      "attention_state": "CORE",
+      "vector_state": {
+        "psi": "integrate multiple scientific domains",
+        "chi": "17-domain repository map",
+        "rho": "relations were primarily documentary",
+        "Delta": "convert relations into a machine-validatable graph",
+        "Sigma": "cross-repository provenance",
+        "Omega": "bounded research forest"
+      },
+      "source_refs": ["rafaelmeloreisnovo/Cosmos:README.md"],
+      "next_experiment": "Generate and validate the deterministic spanning forest."
+    },
+    {
+      "id": "CONCEPT_MAP_LEGACY",
+      "label": "Existing concept maps and maturity matrix",
+      "repo": "rafaelmeloreisnovo/Cosmos",
+      "path": "docs/navigation/CONCEPT-MAPS.md",
+      "domain": ["semantic-graph", "research-governance"],
+      "evidence_state": "VERIFIED",
+      "attention_state": "ACTIVE",
+      "vector_state": {
+        "psi": "preserve prior relationships",
+        "chi": "textual matrices and dependency graphs",
+        "rho": "not executable and partly unspecified",
+        "Delta": "normalize into nodes and typed edges",
+        "Sigma": "legacy concepts remain addressable",
+        "Omega": "migration without erasure"
+      },
+      "source_refs": ["rafaelmeloreisnovo/Cosmos:docs/navigation/CONCEPT-MAPS.md"],
+      "next_experiment": "Map every legacy concept row to a stable node identifier."
+    },
+    {
+      "id": "CALENDAR_SOLAR_CORE",
+      "label": "Maya and Inca solar-calendar geometry",
+      "repo": "rafaelmeloreisnovo/GEOMETRIA_SOLAR_Maia_Inca",
+      "path": "README.md",
+      "domain": ["calendar", "archaeoastronomy", "geometry"],
+      "evidence_state": "VERIFIED",
+      "attention_state": "CORE",
+      "vector_state": {
+        "psi": "model time through measurable geometry",
+        "chi": "azimuth, altitude, obliquity, precession and calendar periods",
+        "rho": "cross-cultural equivalence can be overstated",
+        "Delta": "compare measurements while preserving cultural and evidential boundaries",
+        "Sigma": "calendar formulas and source paths",
+        "Omega": "calendar research nucleus"
+      },
+      "source_refs": ["rafaelmeloreisnovo/GEOMETRIA_SOLAR_Maia_Inca:README.md"],
+      "next_experiment": "Attach uncertainty, source and site metadata to each calendar measurement."
+    },
+    {
+      "id": "TZOLKIN_260",
+      "label": "Tzolkin 13 by 20 cycle",
+      "repo": "rafaelmeloreisnovo/GEOMETRIA_SOLAR_Maia_Inca",
+      "path": "README.md",
+      "domain": ["calendar", "number-structure"],
+      "evidence_state": "VERIFIED",
+      "attention_state": "ACTIVE",
+      "vector_state": {
+        "psi": "represent a documented calendar cycle",
+        "chi": "13 x 20 = 260 days",
+        "rho": "interpretations beyond the arithmetic require sources",
+        "Delta": "separate arithmetic, history and symbolism",
+        "Sigma": "calendar node with explicit period",
+        "Omega": "bounded temporal object"
+      },
+      "source_refs": ["rafaelmeloreisnovo/GEOMETRIA_SOLAR_Maia_Inca:README.md"],
+      "next_experiment": "Register primary and secondary references for historical use and interpretation."
+    },
+    {
+      "id": "PRECESSION_ALIGNMENT",
+      "label": "Precessional correction and alignment drift",
+      "repo": "rafaelmeloreisnovo/GEOMETRIA_SOLAR_Maia_Inca",
+      "path": "README.md",
+      "domain": ["calendar", "astronomy", "geometry"],
+      "evidence_state": "PARTIAL",
+      "attention_state": "UNDERSERVED",
+      "vector_state": {
+        "psi": "connect alignment age and angular drift",
+        "chi": "a correction formula is documented",
+        "rho": "site-specific uncertainty and epoch assumptions are incomplete",
+        "Delta": "add coordinate, epoch and error propagation",
+        "Sigma": "trace each correction to a site and source",
+        "Omega": "testable alignment model"
+      },
+      "source_refs": ["rafaelmeloreisnovo/GEOMETRIA_SOLAR_Maia_Inca:README.md"],
+      "next_experiment": "Compute uncertainty intervals for one site before cross-site generalization."
+    },
+    {
+      "id": "MULTI_PLACE_CALENDARS",
+      "label": "Cross-place calendar comparison",
+      "repo": "rafaelmeloreisnovo/GEOMETRIA_SOLAR_Maia_Inca",
+      "path": "data/calendar_cycles_matrix.json",
+      "domain": ["calendar", "comparative-research", "geography"],
+      "evidence_state": "HYPOTHESIS",
+      "attention_state": "LATENT",
+      "vector_state": {
+        "psi": "compare calendars across distinct places",
+        "chi": "Maya and Inca nodes are present",
+        "rho": "other regions are not yet sourced in this corpus",
+        "Delta": "create candidate records as TOKEN_VAZIO",
+        "Sigma": "preserve place-specific provenance",
+        "Omega": "comparison without forced equivalence"
+      },
+      "source_refs": ["rafaelmeloreisnovo/GEOMETRIA_SOLAR_Maia_Inca:README.md"],
+      "next_experiment": "Add one sourced measurement per candidate region with uncertainty and method."
+    },
+    {
+      "id": "RLL_COSMOLOGY",
+      "label": "Relativity Living Light cosmological model",
+      "repo": "instituto-Rafael/relativity-living-light",
+      "path": "docs/canonicos/14_MODELO_COSMOLOGICO_RLL.md",
+      "domain": ["cosmology", "statistics", "differential-equations"],
+      "evidence_state": "VERIFIED",
+      "attention_state": "ACTIVE",
+      "vector_state": {
+        "psi": "test a transition sector against observations",
+        "chi": "explicit E(a), logistic transition and null limit",
+        "rho": "current fits do not establish superiority",
+        "Delta": "retain falsifiers and model comparison",
+        "Sigma": "claim-gated cosmological record",
+        "Omega": "testable model rather than absolute claim"
+      },
+      "source_refs": ["instituto-Rafael/relativity-living-light:docs/canonicos/14_MODELO_COSMOLOGICO_RLL.md"],
+      "next_experiment": "Compare RLL directly with w0waCDM using covariance-aware joint data."
+    },
+    {
+      "id": "RLL_STATISTICS",
+      "label": "RLL statistical validation pipeline",
+      "repo": "instituto-Rafael/relativity-living-light",
+      "path": "docs/canonicos/16_PIPELINE_VALIDACAO_RLL.md",
+      "domain": ["statistics", "reproducibility", "data-validation"],
+      "evidence_state": "VERIFIED",
+      "attention_state": "CORE",
+      "vector_state": {
+        "psi": "measure model performance",
+        "chi": "chi-square, AIC, AICc, BIC and covariance requirements",
+        "rho": "missing covariance must not be silently replaced",
+        "Delta": "emit TOKEN_VAZIO and explicit assumptions",
+        "Sigma": "versioned data and execution manifests",
+        "Omega": "reproducible comparison"
+      },
+      "source_refs": ["instituto-Rafael/relativity-living-light:docs/canonicos/16_PIPELINE_VALIDACAO_RLL.md"],
+      "next_experiment": "Apply the same uncertainty discipline to calendar alignment studies."
+    },
+    {
+      "id": "CELESTIAL_CATALOG",
+      "label": "Celestial object and observation catalogue",
+      "repo": "rafaelmeloreisnovo/Catalogo-cosmologico",
+      "path": "README.md",
+      "domain": ["astronomy", "catalogue", "provenance"],
+      "evidence_state": "PARTIAL",
+      "attention_state": "ACTIVE",
+      "vector_state": {
+        "psi": "preserve observations and candidate objects",
+        "chi": "JSON, CSV and observation records are listed",
+        "rho": "real, candidate and symbolic records require strict separation",
+        "Delta": "normalize provenance and claim class",
+        "Sigma": "object-level trace ledger",
+        "Omega": "catalogue usable by research pipelines"
+      },
+      "source_refs": ["rafaelmeloreisnovo/Catalogo-cosmologico:README.md"],
+      "next_experiment": "Validate schema and provenance class for every catalogue row."
+    },
+    {
+      "id": "T7_TOROIDAL_ENGINE",
+      "label": "T7 toroidal computational pipeline",
+      "repo": "rafaelmeloreisnovo/ChipQuantum",
+      "path": "README.md",
+      "domain": ["topology", "computation", "low-level"],
+      "evidence_state": "PARTIAL",
+      "attention_state": "ACTIVE",
+      "vector_state": {
+        "psi": "execute deterministic toroidal computation",
+        "chi": "T7, GEOLM, sqrt3 matrix and 42-stage architecture are documented",
+        "rho": "mathematical and benchmark claims require artifact-level verification",
+        "Delta": "link each claim to code, test and result",
+        "Sigma": "cross-architecture execution record",
+        "Omega": "bounded computational topology"
+      },
+      "source_refs": ["rafaelmeloreisnovo/ChipQuantum:README.md"],
+      "next_experiment": "Attach exact source paths and reproducible outputs for each topological invariant."
+    },
+    {
+      "id": "TOROIDAL_RESEARCH_PATH",
+      "label": "Toroidal traversal across knowledge domains",
+      "repo": "rafaelmeloreisnovo/Cosmos",
+      "path": "docs/architecture/RELATIONAL_KNOWLEDGE_FOREST.md",
+      "domain": ["topology", "semantic-graph", "research-method"],
+      "evidence_state": "HYPOTHESIS",
+      "attention_state": "LATENT",
+      "vector_state": {
+        "psi": "use two-cycle traversal for local and global research loops",
+        "chi": "toroidal parameterization provides a formal navigation model",
+        "rho": "navigation topology is not evidence of physical cosmic topology",
+        "Delta": "enforce scientific boundary on every edge",
+        "Sigma": "cycle history with changed-state requirement",
+        "Omega": "non-repetitive feedback traversal"
+      },
+      "source_refs": ["rafaelmeloreisnovo/Cosmos:docs/architecture/RELATIONAL_KNOWLEDGE_FOREST.md"],
+      "next_experiment": "Measure whether toroidal traversal improves orphan detection and research coverage."
+    },
+    {
+      "id": "TRIANGLE_SQRT3_OVER_2",
+      "label": "Equilateral height and sqrt(3)/2 contraction",
+      "repo": "instituto-Rafael/relativity-living-light",
+      "path": "Matemática.md",
+      "domain": ["geometry", "dynamic-systems"],
+      "evidence_state": "VERIFIED",
+      "attention_state": "ACTIVE",
+      "vector_state": {
+        "psi": "separate geometric factor from physical parameters",
+        "chi": "sqrt(3)/2 is documented as equilateral height and contraction factor",
+        "rho": "numerical resemblance can be mistaken for causal identity",
+        "Delta": "test each use in its own model",
+        "Sigma": "geometry and dynamics remain distinguishable",
+        "Omega": "valid cross-domain comparison"
+      },
+      "source_refs": ["instituto-Rafael/relativity-living-light:Matemática.md"],
+      "next_experiment": "Estimate a free contraction parameter and compare it with fixed sqrt(3)/2."
+    },
+    {
+      "id": "POINCARE_RETURN_MAP",
+      "label": "Poincare section and return-map analysis",
+      "repo": "rafaelmeloreisnovo/Cosmos",
+      "path": "TOKEN_VAZIO",
+      "domain": ["dynamic-systems", "topology", "statistics"],
+      "evidence_state": "TOKEN_VAZIO",
+      "attention_state": "FORGOTTEN",
+      "vector_state": {
+        "psi": "measure recurrence and attractors",
+        "chi": "related dynamic language exists across repositories",
+        "rho": "no canonical executable return-map module was located",
+        "Delta": "define state space and section before calculating cycles",
+        "Sigma": "negative search result retained",
+        "Omega": "future falsifiable module"
+      },
+      "source_refs": ["TOKEN_VAZIO"],
+      "next_experiment": "Implement one return map for a declared dynamic system and publish phase-space data."
+    },
+    {
+      "id": "GRAPH_STATISTICS",
+      "label": "Executable graph statistics and coverage",
+      "repo": "rafaelmeloreisnovo/Cosmos",
+      "path": "scripts/build_knowledge_forest.py",
+      "domain": ["graph-theory", "statistics", "knowledge-architecture"],
+      "evidence_state": "HYPOTHESIS",
+      "attention_state": "UNDERSERVED",
+      "vector_state": {
+        "psi": "measure the structure of the research corpus",
+        "chi": "textual concept relationships already exist",
+        "rho": "degree, components, orphans and neglected queues were not automated",
+        "Delta": "generate deterministic graph summaries",
+        "Sigma": "machine-readable matrix",
+        "Omega": "measurable knowledge forest"
+      },
+      "source_refs": ["rafaelmeloreisnovo/Cosmos:docs/navigation/CONCEPT-MAPS.md"],
+      "next_experiment": "Track component count, orphan count, attention coverage and evidence-state distribution over commits."
+    },
+    {
+      "id": "PRIME_MODULAR_PATH",
+      "label": "Prime and modular mathematics research path",
+      "repo": "instituto-Rafael/relativity-living-light",
+      "path": "Numprimod.md",
+      "domain": ["number-theory", "modular-dynamics"],
+      "evidence_state": "TOKEN_VAZIO",
+      "attention_state": "IGNORED",
+      "vector_state": {
+        "psi": "determine whether prime structures have a formal role",
+        "chi": "a short non-academic note exists",
+        "rho": "no defensible bridge to cosmology or calendars is currently derived",
+        "Delta": "exclude from physical claims until a rule and test exist",
+        "Sigma": "exclusion reason recorded",
+        "Omega": "future mathematical study only"
+      },
+      "source_refs": ["instituto-Rafael/relativity-living-light:Numprimod.md"],
+      "next_experiment": "Define an explicit modular map and test a mathematical property without cosmological interpretation."
+    },
+    {
+      "id": "NEGATIVE_RESULTS",
+      "label": "Contradictions, null results and unsupported relations",
+      "repo": "rafaelmeloreisnovo/Cosmos",
+      "path": "data/knowledge/attention_registry.json",
+      "domain": ["epistemology", "research-governance"],
+      "evidence_state": "VERIFIED",
+      "attention_state": "CORE",
+      "vector_state": {
+        "psi": "prevent erasure of failed paths",
+        "chi": "claim states include contradiction and TOKEN_VAZIO",
+        "rho": "positive-result bias can distort the forest",
+        "Delta": "store failures as first-class records",
+        "Sigma": "persistent negative evidence",
+        "Omega": "honest research memory"
+      },
+      "source_refs": ["rafaelmeloreisnovo/Cosmos:docs/architecture/RELATIONAL_KNOWLEDGE_FOREST.md"],
+      "next_experiment": "Require every model comparison to register null and contradictory outcomes."
+    }
+  ],
+  "edges": [
+    {
+      "source": "COSMOS_ROOT",
+      "relation": "EXTENDS",
+      "target": "CONCEPT_MAP_LEGACY",
+      "evidence_state": "VERIFIED",
+      "rationale": "The executable matrix preserves and extends the existing documentary concept map."
+    },
+    {
+      "source": "COSMOS_ROOT",
+      "relation": "EXTENDS",
+      "target": "CALENDAR_SOLAR_CORE",
+      "evidence_state": "VERIFIED",
+      "rationale": "Calendar geometry is a specialized branch of the Cosmos research ecosystem."
+    },
+    {
+      "source": "CALENDAR_SOLAR_CORE",
+      "relation": "TEMPORALIZES",
+      "target": "TZOLKIN_260",
+      "evidence_state": "VERIFIED",
+      "rationale": "The repository documents the 13 by 20 calendar period."
+    },
+    {
+      "source": "CALENDAR_SOLAR_CORE",
+      "relation": "GEOMETRIZES",
+      "target": "PRECESSION_ALIGNMENT",
+      "evidence_state": "PARTIAL",
+      "rationale": "Alignment drift is represented through angular correction."
+    },
+    {
+      "source": "CALENDAR_SOLAR_CORE",
+      "relation": "EXTENDS",
+      "target": "MULTI_PLACE_CALENDARS",
+      "evidence_state": "HYPOTHESIS",
+      "rationale": "Maya and Inca records seed a wider comparison without asserting equivalence."
+    },
+    {
+      "source": "RLL_STATISTICS",
+      "relation": "TESTS",
+      "target": "RLL_COSMOLOGY",
+      "evidence_state": "VERIFIED",
+      "rationale": "The validation pipeline compares the cosmological model with data and adversary models."
+    },
+    {
+      "source": "RLL_STATISTICS",
+      "relation": "EXTENDS",
+      "target": "PRECESSION_ALIGNMENT",
+      "evidence_state": "HYPOTHESIS",
+      "rationale": "Covariance and uncertainty discipline can be applied to alignment measurements."
+    },
+    {
+      "source": "CELESTIAL_CATALOG",
+      "relation": "PROVIDES_DATA",
+      "target": "COSMOS_ROOT",
+      "evidence_state": "PARTIAL",
+      "rationale": "Catalogue records can supply object-level observations when provenance classes are validated."
+    },
+    {
+      "source": "CELESTIAL_CATALOG",
+      "relation": "PROVIDES_DATA",
+      "target": "MULTI_PLACE_CALENDARS",
+      "evidence_state": "HYPOTHESIS",
+      "rationale": "Validated celestial events may become temporal reference data for calendar studies."
+    },
+    {
+      "source": "T7_TOROIDAL_ENGINE",
+      "relation": "IMPLEMENTS",
+      "target": "TOROIDAL_RESEARCH_PATH",
+      "evidence_state": "PARTIAL",
+      "rationale": "ChipQuantum provides an executable toroidal-computation context, while the Cosmos node governs semantic traversal."
+    },
+    {
+      "source": "TOROIDAL_RESEARCH_PATH",
+      "relation": "TOPOLOGIZES",
+      "target": "COSMOS_ROOT",
+      "evidence_state": "HYPOTHESIS",
+      "rationale": "Two-cycle traversal is proposed as a research-navigation topology."
+    },
+    {
+      "source": "TRIANGLE_SQRT3_OVER_2",
+      "relation": "GEOMETRIZES",
+      "target": "T7_TOROIDAL_ENGINE",
+      "evidence_state": "PARTIAL",
+      "rationale": "The ChipQuantum overview names a sqrt3 geometry matrix; exact implementation evidence remains repository-specific."
+    },
+    {
+      "source": "TRIANGLE_SQRT3_OVER_2",
+      "relation": "CONTRASTS",
+      "target": "RLL_COSMOLOGY",
+      "evidence_state": "VERIFIED",
+      "rationale": "The geometric factor sqrt(3)/2 must remain distinct from cosmological coefficients such as 3/2."
+    },
+    {
+      "source": "POINCARE_RETURN_MAP",
+      "relation": "TESTS",
+      "target": "T7_TOROIDAL_ENGINE",
+      "evidence_state": "TOKEN_VAZIO",
+      "rationale": "A return-map module is a candidate test for recurrence and attractor claims."
+    },
+    {
+      "source": "GRAPH_STATISTICS",
+      "relation": "TESTS",
+      "target": "COSMOS_ROOT",
+      "evidence_state": "HYPOTHESIS",
+      "rationale": "Graph metrics can measure coverage, orphan nodes and attention-state balance."
+    },
+    {
+      "source": "GRAPH_STATISTICS",
+      "relation": "FORMALIZES",
+      "target": "CONCEPT_MAP_LEGACY",
+      "evidence_state": "HYPOTHESIS",
+      "rationale": "The script converts documentary relationships into validated graph records."
+    },
+    {
+      "source": "PRIME_MODULAR_PATH",
+      "relation": "CONTRASTS",
+      "target": "RLL_COSMOLOGY",
+      "evidence_state": "TOKEN_VAZIO",
+      "rationale": "No current derivation justifies importing the prime note into cosmological claims."
+    },
+    {
+      "source": "NEGATIVE_RESULTS",
+      "relation": "FALSIFIES",
+      "target": "RLL_COSMOLOGY",
+      "evidence_state": "VERIFIED",
+      "rationale": "Null limits and inferior fits must remain part of the model record."
+    },
+    {
+      "source": "NEGATIVE_RESULTS",
+      "relation": "CONTRASTS",
+      "target": "MULTI_PLACE_CALENDARS",
+      "evidence_state": "HYPOTHESIS",
+      "rationale": "Non-matches and cultural differences must be preserved rather than forced into one pattern."
+    }
+  ]
+}
