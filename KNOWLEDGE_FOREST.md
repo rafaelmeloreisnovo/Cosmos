@@ -36,4 +36,5 @@ artifacts/knowledge_forest.dot
 source -> concept -> typed relation -> evidence state -> next experiment -> feedback
 ```
 
-No similarity of symbols, numbers or shapes is promoted to physical causality without a derivation and a test.
+Similarity of symbols, numbers or shapes is not promoted to physical causality
+without a derivation and a test.
