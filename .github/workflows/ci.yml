@@ -29,6 +29,15 @@ jobs:
           tail -n 120 /tmp/markdownlint.log
           exit "$status"
 
+      - name: Upload markdownlint diagnostics
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: markdownlint-diagnostics
+          path: /tmp/markdownlint.log
+          if-no-files-found: error
+          retention-days: 1
+
       - name: Check required root files
         run: |
           for f in README.md CONTRIBUTING.md CHANGELOG.md CODE_OF_CONDUCT.md LICENSE; do
