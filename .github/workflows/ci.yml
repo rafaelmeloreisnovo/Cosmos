@@ -21,7 +21,13 @@ jobs:
         run: npm install -g markdownlint-cli2
 
       - name: Lint Markdown
-        run: markdownlint-cli2 "**/*.md" "#node_modules"
+        shell: bash
+        run: |
+          set +e
+          markdownlint-cli2 "**/*.md" "#node_modules" > /tmp/markdownlint.log 2>&1
+          status=$?
+          tail -n 120 /tmp/markdownlint.log
+          exit "$status"
 
       - name: Check required root files
         run: |
