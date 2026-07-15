@@ -1,0 +1,99 @@
+{
+  "schema_version": "1.0.0",
+  "generated_on": "2026-07-15",
+  "policy": {
+    "purpose": "Preserve latent, forgotten, underserved, ignored and unresolved research paths without converting absence into evidence.",
+    "required_fields": [
+      "id",
+      "node_id",
+      "attention_state",
+      "reason",
+      "risk_if_ignored",
+      "next_action",
+      "exit_condition"
+    ]
+  },
+  "records": [
+    {
+      "id": "ATT-001",
+      "node_id": "POINCARE_RETURN_MAP",
+      "attention_state": "FORGOTTEN",
+      "reason": "Dynamic-system and attractor language appears in the ecosystem, but no canonical executable Poincare section was located.",
+      "risk_if_ignored": "Recurrence and attractor claims remain descriptive rather than measured.",
+      "next_action": "Define one state space, one section, one return rule and one reproducible dataset.",
+      "exit_condition": "A repository artifact generates a return map and records recurrence statistics."
+    },
+    {
+      "id": "ATT-002",
+      "node_id": "GRAPH_STATISTICS",
+      "attention_state": "UNDERSERVED",
+      "reason": "Concept maps exist, but graph coverage, orphan detection and connected components were not executable.",
+      "risk_if_ignored": "Documents continue to multiply without measurable integration.",
+      "next_action": "Generate a deterministic forest, DOT graph and attention queue from the JSON matrix.",
+      "exit_condition": "The builder completes with zero validation errors and emits both artifacts."
+    },
+    {
+      "id": "ATT-003",
+      "node_id": "MULTI_PLACE_CALENDARS",
+      "attention_state": "LATENT",
+      "reason": "The current calendar repository is strong on Maya and Inca material but does not yet provide sourced comparable records for several other places.",
+      "risk_if_ignored": "Cross-cultural claims may be generalized from only two nuclei.",
+      "next_action": "Add candidate regions as TOKEN_VAZIO and promote them only after source, method, period and uncertainty are registered.",
+      "exit_condition": "At least three additional regions have source-bounded records without forced equivalence."
+    },
+    {
+      "id": "ATT-004",
+      "node_id": "PRECESSION_ALIGNMENT",
+      "attention_state": "UNDERSERVED",
+      "reason": "Angular correction is documented, but site epoch, coordinate uncertainty, restoration history and error propagation are incomplete.",
+      "risk_if_ignored": "A visually close alignment may be reported with more precision than the data permit.",
+      "next_action": "Create one full worked example with coordinates, epoch, horizon model and uncertainty interval.",
+      "exit_condition": "The worked example is reproducible from declared inputs."
+    },
+    {
+      "id": "ATT-005",
+      "node_id": "PRIME_MODULAR_PATH",
+      "attention_state": "IGNORED",
+      "reason": "The located prime note does not provide a formal bridge to cosmology, calendar geometry or physical observables.",
+      "risk_if_ignored": "Low; exclusion prevents unsupported numerical association.",
+      "next_action": "Keep outside physical claims until an explicit modular map and theorem candidate exist.",
+      "exit_condition": "A formal definition, proof target and computational test are present."
+    },
+    {
+      "id": "ATT-006",
+      "node_id": "T7_TOROIDAL_ENGINE",
+      "attention_state": "ACTIVE",
+      "reason": "Toroidal, sqrt3 and attractor claims are documented at overview level and need source-to-result traceability.",
+      "risk_if_ignored": "Architecture labels may outrun executable evidence.",
+      "next_action": "Attach exact code paths, build commands, hashes and outputs to every quantitative claim.",
+      "exit_condition": "Each quantitative claim resolves to a code artifact and reproducible result."
+    },
+    {
+      "id": "ATT-007",
+      "node_id": "CELESTIAL_CATALOG",
+      "attention_state": "ACTIVE",
+      "reason": "Real observations, candidates and symbolic records coexist and require machine-readable claim classes.",
+      "risk_if_ignored": "Candidate or symbolic entries may be mistaken for confirmed catalogue objects.",
+      "next_action": "Add provenance_class and verification_state to every row and reject ambiguous records.",
+      "exit_condition": "Schema validation reports zero unclassified catalogue entries."
+    },
+    {
+      "id": "ATT-008",
+      "node_id": "TRIANGLE_SQRT3_OVER_2",
+      "attention_state": "ACTIVE",
+      "reason": "The geometric constant is useful across geometry and dynamics, but it must not be confused with unrelated physical coefficients.",
+      "risk_if_ignored": "Numerical resemblance may be promoted to causal identity.",
+      "next_action": "Compare a fixed sqrt(3)/2 model with a free-parameter model and retain negative results.",
+      "exit_condition": "Model comparison quantifies whether fixing the factor improves or worsens explanatory performance."
+    },
+    {
+      "id": "ATT-009",
+      "node_id": "NEGATIVE_RESULTS",
+      "attention_state": "CORE",
+      "reason": "Contradictions, null limits and non-matches are necessary for scientific memory.",
+      "risk_if_ignored": "The forest becomes a positive-claim catalogue rather than a research system.",
+      "next_action": "Require null, contradiction and TOKEN_VAZIO counts in generated reports.",
+      "exit_condition": "Every report displays evidence-state distribution including negative states."
+    }
+  ]
+}
