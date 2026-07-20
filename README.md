@@ -18,12 +18,31 @@ RAFAELIA analytical framework: *VAZIO → VERBO → CHEIO → RETROALIMENTAÇÃO
 
 ---
 
+## Cânone fundador
+
+O documento canônico central do repositório é:
+
+- **[CÂNONE DO COSMOS RAFAELIA — Do ∅ observado à recorrência em sete dimensões](docs/canonicos/01_CANONE_DO_COSMOS_RAFAELIA.md)**
+
+Ele formaliza quatro classes de significado — `[E]` exata, `[C]` convenção, `[H]` hipótese e `[P]` parábola — e estabelece a regra:
+
+```text
+símbolo não substitui medida
+hipótese não substitui prova
+ausência preservada = TOKEN_VAZIO
+```
+
+Índice dos documentos canônicos: [`docs/canonicos/README.md`](docs/canonicos/README.md).
+
+---
+
 ## Repository Map
 
 ```
 Cosmos/
 │
 ├── docs/
+│   ├── canonicos/                 Cânones, invariantes e contratos epistêmicos
 │   ├── areas/                     17 knowledge domain documents (mathematics → cryptography)
 │   ├── bibliographic-references/  External/internal references and validation
 │   ├── classifications/           DISCOVERIES, HYPOTHESES, THEORIES, THESES, PATENT-POTENTIAL
@@ -82,6 +101,7 @@ Cosmos/
 
 ## Navigation
 
+- Canonical foundation: [`docs/canonicos/README.md`](docs/canonicos/README.md)
 - Start at [`docs/navigation/NAVIGATION.md`](docs/navigation/NAVIGATION.md)
 - Reading paths: [`docs/navigation/READING-PATHS.md`](docs/navigation/READING-PATHS.md)
 - Concept maps: [`docs/navigation/CONCEPT-MAPS.md`](docs/navigation/CONCEPT-MAPS.md)
