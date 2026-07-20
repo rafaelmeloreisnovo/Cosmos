@@ -1,0 +1,70 @@
+{
+  "schema": "rafaelia.cosmos.canon.v1",
+  "title": "CÂNONE DO COSMOS RAFAELIA",
+  "subtitle": "Do vazio observado à recorrência em sete dimensões",
+  "author_signature": "RAFCODE-Φ-∆RafaelVerboΩ-𓂀ΔΦΩ",
+  "source_path": "docs/canonicos/01_CANONE_DO_COSMOS_RAFAELIA.md",
+  "source_git_blob_sha": "20488c286b3a1b13e244be4f1551b9734c5826d5",
+  "principle": [
+    "VAZIO",
+    "VERBO",
+    "CHEIO",
+    "RETROALIMENTAÇÃO",
+    "NOVO_VAZIO"
+  ],
+  "epistemic_classes": {
+    "E": "exact",
+    "C": "convention",
+    "H": "hypothesis",
+    "P": "parable"
+  },
+  "unknown_state": "TOKEN_VAZIO",
+  "exact_invariants": {
+    "string_permutations": {
+      "0001123": 420,
+      "01123": 60,
+      "0123": 24
+    },
+    "matrices": {
+      "A_shape": [8, 5],
+      "A_states": 40,
+      "A_internal_pairs": 780,
+      "B_shape": [7, 3],
+      "B_states": 21,
+      "B_internal_pairs": 210,
+      "cross_relations": 840,
+      "pair_of_pairs": 163800,
+      "A_adjacent_2x2_permutations": 672,
+      "B_adjacent_2x2_permutations": 288,
+      "A_general_2x2_permutations": 6720,
+      "B_general_2x2_permutations": 1512
+    },
+    "hyperforms": {
+      "dimensions": 7,
+      "operators_per_dimension": 6,
+      "total": 42
+    },
+    "cycle_70x7": {
+      "total": 490,
+      "half_axis_70_decimal": 35,
+      "half_axis_70_base7": "50",
+      "half_total_decimal": 245,
+      "half_total_base7": "500"
+    },
+    "bitraf64": {
+      "alphabet_order": ["Σ", "Ω", "Δ", "Φ", "B", "I", "T", "R", "A", "F"],
+      "length": 64,
+      "frequencies": [6, 7, 9, 9, 5, 5, 4, 7, 4, 8],
+      "entropy_bits_per_symbol_approx": 3.2642
+    }
+  },
+  "governance": {
+    "symbol_is_measure": false,
+    "hypothesis_is_proof": false,
+    "seal_is_content": false,
+    "causality_without_support": "TOKEN_VAZIO",
+    "revision_fields": ["F_ok", "F_gap", "F_next"]
+  },
+  "claim_allowed": false,
+  "claim_gate": "External physical claims require measurement, units, method, falsifier and reproducible evidence."
+}
