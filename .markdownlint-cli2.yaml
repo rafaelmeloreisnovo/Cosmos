@@ -1,7 +1,8 @@
-# The canonical document contains dense LaTeX, symbolic headings and parabolic
-# sections. Its exact claims are validated by validate-cosmos-canon.py.
-config:
-  MD013: false
-  MD060: false
+# Canonical long-form documents contain dense LaTeX, symbolic headings and
+# parabolic sections. Their exact claims are validated by
+# scripts/formal/validate-cosmos-canon.py. The exception is deliberately scoped
+# to the canonical documents touched by this change.
 ignores:
+  - "README.md"
+  - "docs/canonicos/README.md"
   - "docs/canonicos/01_CANONE_DO_COSMOS_RAFAELIA.md"
