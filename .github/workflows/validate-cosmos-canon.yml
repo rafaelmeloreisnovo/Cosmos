@@ -1,0 +1,33 @@
+name: Validate Cosmos Canon
+
+on:
+  push:
+    paths:
+      - 'docs/canonicos/**'
+      - 'scripts/formal/validate-cosmos-canon.py'
+      - '.github/workflows/validate-cosmos-canon.yml'
+  pull_request:
+    paths:
+      - 'docs/canonicos/**'
+      - 'scripts/formal/validate-cosmos-canon.py'
+      - '.github/workflows/validate-cosmos-canon.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  validate-exact-invariants:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Validate Cânone exact invariants
+        run: python3 scripts/formal/validate-cosmos-canon.py
