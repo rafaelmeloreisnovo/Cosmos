@@ -1,0 +1,4 @@
+# The canonical document contains dense LaTeX, symbolic headings and parabolic
+# sections. Its exact claims are validated by validate-cosmos-canon.py.
+ignores:
+  - "docs/canonicos/01_CANONE_DO_COSMOS_RAFAELIA.md"
