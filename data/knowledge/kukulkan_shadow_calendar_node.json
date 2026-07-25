@@ -1,0 +1,93 @@
+{
+  "schema_version": "1.0.0",
+  "node": {
+    "id": "KUKULKAN_SHADOW_CALENDAR",
+    "label": "Kukulkan projected-light annual calendar",
+    "repo": "rafaelmeloreisnovo/GEOMETRIA_SOLAR_Maia_Inca",
+    "path": "docs/kukulkan_serpente_luz_modelo_geometrico_calendario.md",
+    "domain": [
+      "calendar",
+      "archaeoastronomy",
+      "projective-geometry",
+      "solar-shadow",
+      "maya",
+      "venus"
+    ],
+    "evidence_state": "PARTIAL",
+    "attention_state": "ACTIVE",
+    "claim_allowed": false,
+    "vector_state": {
+      "psi": "reconstruct the annual and intraday Kukulkan light-shadow sequence",
+      "chi": "INAH-documented triangular illumination sequence and published architecture dimensions",
+      "rho": "rounded dimensions, restoration history, absent canonical 3D survey and interpretive controversy",
+      "Delta": "separate observed light geometry from symbolic and historical claims",
+      "Sigma": "cross-repository provenance to calendar model and paper",
+      "Omega": "falsifiable projection model with bounded claims"
+    },
+    "source_refs": [
+      "rafaelmeloreisnovo/GEOMETRIA_SOLAR_Maia_Inca:docs/kukulkan_serpente_luz_modelo_geometrico_calendario.md",
+      "rafaelmeloreisnovo/GEOMETRIA_SOLAR_Maia_Inca:data/kukulkan_shadow_calendar_model.v1.json",
+      "rafaelmeloreisnovo/papers:docs/KUKULKAN_SERPENTE_LUZ_GEOMETRIA_PROJETIVA_CALENDARIO.md",
+      "INAH 2026: Aspectos calendaricos y astronomicos de El Castillo",
+      "Casares Contreras 2021: doi:10.22134/trace.79.2021.689"
+    ],
+    "relations": [
+      {
+        "relation": "EXTENDS",
+        "target": "CALENDAR_SOLAR_CORE",
+        "evidence_state": "VERIFIED"
+      },
+      {
+        "relation": "TEMPORALIZES",
+        "target": "MULTI_PLACE_CALENDARS",
+        "evidence_state": "HYPOTHESIS"
+      },
+      {
+        "relation": "GEOMETRIZES",
+        "target": "TOROIDAL_RESEARCH_PATH",
+        "evidence_state": "CONTRASTS",
+        "rationale": "The shadow model is projective solar geometry and must not be promoted to toroidal physical cosmology."
+      },
+      {
+        "relation": "CONTRASTS",
+        "target": "PRECESSION_ALIGNMENT",
+        "evidence_state": "VERIFIED",
+        "rationale": "The Kukulkan sequence is driven primarily by solar position and local architecture; generic precession-rate subtraction is not its model."
+      },
+      {
+        "relation": "TESTS",
+        "target": "TRIANGLE_SQRT3_OVER_2",
+        "evidence_state": "HYPOTHESIS",
+        "rationale": "Rounded published dimensions produce a close ratio, requiring 3D measurement and a free-slope control."
+      }
+    ],
+    "mathematical_core": {
+      "state": "K(n,t)=(N_triangles,widths,persistence,solar_altitude,solar_azimuth,annual_polarity,daily_polarity)",
+      "shadow_projection": "p_i=x_i-((n_b dot x_i-d_b)/(n_b dot s(t)))*s(t)",
+      "pythagoras": "ell=sqrt(R^2+H_body^2)",
+      "sqrt3_test": "H_q=(sqrt(3)/2)*R",
+      "local_bhaskara": "tau=(-b +- sqrt(b^2-4ac))/(2a)"
+    },
+    "observed_anchor_states": {
+      "first_light": "02-12",
+      "seven_triangles_spring": "03-15 through 03-25",
+      "nine_triangles_spring": "04-09",
+      "first_full_zenith": "05-24",
+      "summer_solstice": "06-21",
+      "second_full_zenith": "07-19",
+      "nine_triangles_autumn": "09-02",
+      "last_light": "about 10-29",
+      "dark_days_each_side_of_winter_solstice": 52
+    },
+    "next_experiment": "Obtain a georeferenced 3D point cloud and timestamped image sequence, perform minute-resolution solar ray casting, and compare source geometry, free-slope, sqrt3/2-fixed, randomized-orientation and restoration models.",
+    "token_vazio": [
+      "unrounded body dimensions",
+      "exact balustrade plane",
+      "restoration mask",
+      "historical 3D geometry",
+      "independent replication",
+      "design intent for sqrt3/2",
+      "mechanistic identity between 52-day darkness and 52-year Calendar Round"
+    ]
+  }
+}
