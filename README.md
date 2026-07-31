@@ -1,5 +1,9 @@
 # Cosmos — RAFAELIA
 
+**Estado:** `ACTIVE`  
+**Proprietário lógico:** `research-governance`  
+**Repositório:** [`rafaelmeloreisnovo/Cosmos`](https://github.com/rafaelmeloreisnovo/Cosmos)
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Domain](https://img.shields.io/badge/Domain-Cosmology%20%7C%20Astrophysics%20%7C%20RAFAELIA-purple)](docs/)
 [![Research](https://img.shields.io/badge/Research-RAFAELIA%20Ecosystem-orange)](https://github.com/rafaelmeloreisnovo/ChipQuantum)
