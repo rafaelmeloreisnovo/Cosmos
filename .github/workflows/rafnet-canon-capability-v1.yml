@@ -1,0 +1,37 @@
+name: RafNet Canon Capability V1
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/federation/rafnet_canon_validate_v1.py'
+      - 'tests/test_rafnet_canon_capability_v1.py'
+      - 'contracts/rafnet/cosmos.canon.validate.v1.json'
+      - 'docs/interop/RAFNET_CANON_CAPABILITY_V1.md'
+      - '.github/workflows/rafnet-canon-capability-v1.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  bounded-canon-capability:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Compile adapter
+        run: python3 -m py_compile scripts/federation/rafnet_canon_validate_v1.py
+
+      - name: Run capability tests
+        run: python3 -m unittest tests/test_rafnet_canon_capability_v1.py -v
+
+      - name: Evidence boundary
+        if: always()
+        run: |
+          printf '%s\n' \
+            'EVIDENCE_SCOPE=EXACT_CANONICAL_COMBINATORIAL_INVARIANTS_ONLY' \
+            'HYPOTHESES_VALIDATED=false' \
+            'PHYSICAL_CLAIMS_PROVEN=false' \
+            'NETWORK_RUNTIME_PROVEN=TOKEN_VAZIO' \
+            'CLAIM_ALLOWED=false'

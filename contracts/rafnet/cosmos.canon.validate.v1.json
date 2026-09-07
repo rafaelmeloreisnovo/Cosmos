@@ -1,0 +1,25 @@
+{
+  "schema": "rafaelia.cosmos.rafnet-capability.v1",
+  "capability": "cosmos.canon.validate",
+  "consumer_repository": "rafaelmeloreisnovo/Cosmos",
+  "consumer_base_commit": "de1c5a88913f5d6ee6e90b7b09750923c91cb4df",
+  "adapter_path": "scripts/federation/rafnet_canon_validate_v1.py",
+  "bound_executor": {
+    "path": "scripts/formal/validate-cosmos-canon.py",
+    "git_blob_sha1": "be1713d517af16dbc9ca204fa2c0e6a71e054314",
+    "output_schema": "rafaelia.cosmos.canon.validation.v1"
+  },
+  "payload": {
+    "encoding": "UTF-8",
+    "literal": "CANON_EXACT_V1",
+    "max_bytes": 64,
+    "arbitrary_command_allowed": false,
+    "embedded_private_data_allowed": false
+  },
+  "evidence_scope": "EXACT_CANONICAL_COMBINATORIAL_INVARIANTS_ONLY",
+  "hypotheses_validated": false,
+  "physical_claims_proven": false,
+  "scientific_generalization_allowed": false,
+  "network_authority": false,
+  "claim_allowed": false
+}
